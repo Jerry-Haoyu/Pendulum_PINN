@@ -34,9 +34,12 @@ where $F(x+\Delta x)$ would be replaced by an *euler guess*, i.e., $F(x+\Delta x
 ## Optimizations
 ### Global weight adjustment 
 - Adjust the weight of physics loss and data loss every $f$ steps:
+
 $$
-w_{\text{physics}}\gets \alpha w_{\text{physics}} +(1-\alpha)\frac{\|\nabla_{\theta } L_{\text{total}}\|_2 }{\|\nabla_{\theta} L_{\text{physics}}\|_2} \\
-\; \\
+w_{\text{physics}}\gets \alpha w_{\text{physics}} +(1-\alpha)\frac{\|\nabla_{\theta } L_{\text{total}}\|_2 }{\|\nabla_{\theta} L_{\text{physics}}\|_2} 
+$$
+
+$$
 w_{\text{data}}\gets \alpha w_{\text{data}} +(1-\alpha)\frac{\|\nabla_{\theta } L_{\text{total}}\|_2 }{\|\nabla_{\theta} L_{\text{data}}\|_2}
 $$
 
