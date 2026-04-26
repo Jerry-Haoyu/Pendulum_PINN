@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=resnet56
+#SBATCH --job-name=pendulum_pinn
 #SBATCH --account=bgvu-delta-gpu
 #SBATCH --partition=gpuA100x4
 #SBATCH --gpus-per-node=1
